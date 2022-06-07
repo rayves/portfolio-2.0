@@ -1,4 +1,4 @@
-<%# <div class="h1-container">
+<div class="h1-container">
 	<h1 class="default-page-header blog-header">Projects</h1>
 </div>
 <p></p>
@@ -7,6 +7,22 @@
 	<!-- holds call project cards in a container -->
 	<section class="projects-container">
 		<!-- holds individual card -->
+		<% @projects.each do |project| %>
+			<article class="project-card">
+				<!-- holds project image -->
+				<div class="card-content">
+					<!-- holds project title -->
+					<h2 class="blog-heading"><%= project.name %></h2>
+					<%# <img src="../imgs/Projects/photograph.PNG" alt="photograph video" class="project-img"> %>
+					<%# <p class="project-lang">
+						<i class="fas fa-film project-logo"></i>
+						<i class="fab fa-youtube project-logo"></i>
+					</p> %>
+					<p class="blog-des"><%= project.description %></p>
+					<%= link_to 'text', path %>
+				</div>
+			</article>
+		<% end %>
 		<div class="project-card">
 			<!-- holds card content -->
 			<div class="card-content">
@@ -20,78 +36,9 @@
 				<a href="../html/projects/project-photograph.html">Read More</a>
 			</div>
 		</div>
-		<div class="project-card">
-			<div class="card-content">
-				<h2 class="blog-heading">PROJECT #2</h2>
-				<img src="../imgs/Projects/chips.jpg" alt="chips" class="project-img">
-				<p class="project-lang">
-					<i class="devicon-ruby-plain"></i>
-					<i class="devicon-nodejs-plain"></i>
-					<i class="devicon-rails-plain"></i>
-				</p>
-				<p class="blog-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores libero architecto explicabo delectus incidunt eum soluta.</p>
-				<a href="../html/projects/project-photograph.html">Read More</a>
-			</div>
-		</div>
-		<div class="project-card">
-			<div class="card-content">
-				<h2 class="blog-heading">PROJECT #3</h2>
-				<img src="../imgs/Projects/hack.jpg" alt="hack" class="project-img">
-				<p class="project-lang">
-					<i class="devicon-nginx-original"></i>
-					<i class="devicon-postgresql-plain"></i>
-					<i class="devicon-go-original-wordmark"></i>
-					<i class="devicon-github-original"></i>
-				</p>
-				<p class="blog-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores libero architecto explicabo delectus incidunt eum soluta.</p>
-				<a href="../html/projects/project-photograph.html">Read More</a>
-			</div>
-		</div>
-		<div class="project-card">
-			<div class="card-content">
-				<h2 class="blog-heading">PROJECT #4</h2>
-				<img src="../imgs/Projects/laptop.jpg" alt="laptop" class="project-img">
-				<p class="project-lang">
-					<i class="devicon-python-plain"></i>
-					<i class="devicon-java-plain"></i>
-					<i class="devicon-angularjs-plain"></i>
-					<i class="devicon-dart-plain"></i>
-				</p>
-				<p class="blog-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores libero architecto explicabo delectus incidunt eum soluta.</p>
-				<a href="../html/projects/project-photograph.html">Read More</a>
-			</div>
-		</div>
-		<div class="project-card">
-			<div class="card-content">
-				<h2 class="blog-heading">PROJECT #5</h2>
-				<img src="../imgs/Projects/robot.jpg" alt="robot" class="project-img">
-				<p class="project-lang">
-					<i class="devicon-react-original"></i>
-					<i class="devicon-typescript-plain"></i>
-					<i class="devicon-ruby-plain"></i>
-					<i class="devicon-rails-plain"></i>
-				</p>
-				<p class="blog-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores libero architecto explicabo delectus incidunt eum soluta.</p>
-				<a href="../html/projects/project-photograph.html">Read More</a>
-			</div>
-		</div>
-		<div class="project-card">
-			<div class="card-content">
-				<h2 class="blog-heading">PROJECT #6</h2>
-				<img src="../imgs/Projects/solder.jpg" alt="solder" class="project-img">
-				<p class="project-lang">
-					<i class="devicon-bootstrap-plain"></i>
-					<i class="devicon-nginx-original"></i>
-					<i class="devicon-c-plain"></i>
-					<i class="devicon-csharp-plain"></i>
-				</p>
-				<p class="blog-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores libero architecto explicabo delectus incidunt eum soluta.</p>
-				<a href="../html/projects/project-photograph.html">Read More</a>
-			</div>
-		</div>
 	</section>
 </main>
-<script type="text/javascript" src="../scripts/vanilla-tilt.js" integrity="sha512-5RPueBRwDHxZ362heK/fya6Azw6ayHtn7nTqZnIoGFjiXdGAEvAjKco/FvzpTEIbfJI2Qxirl0/g21qizV/a/g=="></script>
+<%# <script type="text/javascript" src="../scripts/vanilla-tilt.js" integrity="sha512-5RPueBRwDHxZ362heK/fya6Azw6ayHtn7nTqZnIoGFjiXdGAEvAjKco/FvzpTEIbfJI2Qxirl0/g21qizV/a/g=="></script>
 <script>
 	VanillaTilt.init(document.querySelectorAll(".project-card"),{
 			max: 25,
@@ -99,4 +46,4 @@
 	glare: true,
 	"max glare": 1,
 		});
-</script> %>
+</script>

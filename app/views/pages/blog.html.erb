@@ -1,2 +1,10 @@
-<h1>Pages#blog</h1>
-<p>Find me in app/views/pages/blog.html.erb</p>
+<div class="h1-container">
+	<h1 class="default-page-header blog-header">Blog Posts</h1>
+</div>
+<main>
+	<% @projects.each do |project| %>
+		<% project.assets.each do |tech| %>
+			<%= image_tag "Projects/#{tech.path}" %>
+		<% end %>
+	<% end %>
+</main>
