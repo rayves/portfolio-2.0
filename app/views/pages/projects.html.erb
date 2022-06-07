@@ -12,33 +12,21 @@
 				<!-- holds project image -->
 				<div class="card-content">
 					<!-- holds project title -->
-					<h2 class="blog-heading"><%= project.name %></h2>
+					<h2 class="blog-heading"><%= project.name.titleize %></h2>
 					<%# <img src="../imgs/Projects/photograph.PNG" alt="photograph video" class="project-img"> %>
-					<%# <p class="project-lang">
-						<i class="fas fa-film project-logo"></i>
-						<i class="fab fa-youtube project-logo"></i>
-					</p> %>
+					<p class="project-lang">
+						<% project.technologies.each do |tech| %>
+							<i class="<%= tech.icon %>"></i>
+						<% end %>
+					</p>
 					<p class="blog-des"><%= project.description %></p>
-					<%= link_to 'text', path %>
+					<%= link_to 'See More', project_path(project.id) %>
 				</div>
 			</article>
 		<% end %>
-		<div class="project-card">
-			<!-- holds card content -->
-			<div class="card-content">
-				<h2 class="blog-heading">PHOTOGRAPH</h2>
-				<img src="../imgs/Projects/photograph.PNG" alt="photograph video" class="project-img">
-				<p class="project-lang">
-					<i class="fas fa-film project-logo"></i>
-					<i class="fab fa-youtube project-logo"></i>
-				</p>
-				<p class="blog-des">Special film project entered into the My RØDE Reel 2021 compitition</p>
-				<a href="../html/projects/project-photograph.html">Read More</a>
-			</div>
-		</div>
 	</section>
 </main>
-<%# <script type="text/javascript" src="../scripts/vanilla-tilt.js" integrity="sha512-5RPueBRwDHxZ362heK/fya6Azw6ayHtn7nTqZnIoGFjiXdGAEvAjKco/FvzpTEIbfJI2Qxirl0/g21qizV/a/g=="></script>
+<script type="text/javascript" src="../scripts/vanilla-tilt.js" integrity="sha512-5RPueBRwDHxZ362heK/fya6Azw6ayHtn7nTqZnIoGFjiXdGAEvAjKco/FvzpTEIbfJI2Qxirl0/g21qizV/a/g=="></script>
 <script>
 	VanillaTilt.init(document.querySelectorAll(".project-card"),{
 			max: 25,
