@@ -1,3 +1,5 @@
+@import 'variables';
+
 // set default background for page
 @mixin page-default {
     background-color: $background-color;

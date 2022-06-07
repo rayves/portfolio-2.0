@@ -1,50 +1,50 @@
 <header>
-    <nav class="navbar">
-        <!-- unordered list element for clear distiction that list item elements are under the same parent -->
-        <ul class="navbar-nav">
-            <!-- logo at top of nagivator -->
-            <li class="logo">
-                <a href="#" class="nav-link"></a>
-                <img src="../imgs/Home/RV.svg" alt="RV logo" class="nav-logo">
-            </li>
-            <!-- list item grouped to create tile that holds both icon and text that will both be considered a link -->
-            <li class="nav-item">
-                <a href="../home.html" class="nav-link">
-                    <i class="fas fa-home nav-icon"></i>
-                    <!-- span so text appears next to icon -->
-                    <span class="link-text">Home</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./about.html" class="nav-link highlighted">
-                    <i class="fas fa-user-astronaut nav-icon"></i>
-                    <span class="link-text">About</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./journey.html" class="nav-link">
-                    <i class="fas fa-briefcase nav-icon"></i>
-                    <span class="link-text">Journey</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./projects-main.html" class="nav-link">
-                    <i class="fas fa-project-diagram nav-icon"></i>
-                    <span class="link-text">Projects</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./blog-main.html" class="nav-link">
-                    <i class="fab fa-blogger-b nav-icon"></i>
-                    <span class="link-text">Blog</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./contact.html" class="nav-link">
-                    <i class="far fa-address-book nav-icon"></i>
-                    <span class="link-text">Contact</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+	<nav class="navbar">
+		<!-- unordered list element for clear distiction that list item elements are under the same parent -->
+		<ul class="navbar-nav">
+			<!-- logo at top of nagivator -->
+			<li class="logo">
+				<a href="#" class="nav-link"></a>
+				<%# <img src="../imgs/Home/RV.svg" alt="RV logo" class="nav-logo"> %>
+				<%= image_tag "Home/RV.svg", class: "nav-logo", alt: "RV logo" %>
+			</li>
+			<!-- list item grouped to create tile that holds both icon and text that will both be considered a link -->
+			<li class="nav-item">
+				<%= link_to root_path, class: "nav-link" do %>
+					<i class="fas fa-home nav-icon"></i>
+					<span class="link-text">Home</span>
+				<% end %>
+			</li>
+			<li class="nav-item">
+				<%= link_to about_path, class: "nav-link" do %>
+					<i class="fas fa-user-astronaut nav-icon"></i>
+					<span class="link-text">About</span>
+				<% end %>
+			</li>
+			<li class="nav-item">
+				<%= link_to journey_path, class: "nav-link" do %>
+					<i class="fas fa-briefcase nav-icon"></i>
+					<span class="link-text">Journey</span>
+				<% end %>
+			</li>
+			<li class="nav-item">
+				<%= link_to projects_path, class: "nav-link" do %>
+					<i class="fas fa-project-diagram nav-icon"></i>
+					<span class="link-text">Projects</span>
+				<% end %>
+			</li>
+			<li class="nav-item">
+				<%= link_to blog_path, class: "nav-link" do %>
+					<i class="fab fa-blogger-b nav-icon"></i>
+					<span class="link-text">Blog</span>
+				<% end %>
+			</li>
+			<li class="nav-item">
+				<%= link_to contact_path, class: "nav-link" do %>
+					<i class="far fa-address-book nav-icon"></i>
+					<span class="link-text">Contact</span>
+				<% end %>
+			</li>
+		</ul>
+	</nav>
 </header>
