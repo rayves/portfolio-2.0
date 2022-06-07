@@ -4,6 +4,9 @@
 @mixin page-default {
     background-color: $background-color;
     color: $color-1;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 // set default margin for pages
