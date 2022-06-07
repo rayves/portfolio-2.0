@@ -1,2 +1,41 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<div class="h1-container">
+	<h1 class="default-page-header blog-header">Contact Me</h1>
+</div>
+<main>
+	<!-- form contained in section for layout adjustments when needed -->
+	<section class="contact-page-layout">
+		<form
+          action="https://formspree.io/f/xvodneyg"
+          method="POST"
+          class="contact-form">
+          <label> Name: </label>
+          <!-- formspree field names for plugin behaviour control -->
+          <input
+            type="text"
+            name="_name"
+            placeholder="Enter your name"
+            required
+          />
+          <label> Email: </label>
+          <input
+            type="email"
+            name="_replyto"
+            placeholder="Enter your email"
+            required
+          />
+          <label> Subject: </label>
+          <input
+            type="text"
+            name="_subject"
+            placeholder="What would you like to discuss?"
+            required
+          />
+          <label> Your message: </label>
+          <textarea name="message" required></textarea>
+          <div class="button-container">
+            <!-- button contained in form for action -->
+            <button type="submit">Send</button>
+          </div>
+        </form>
+	</section>
+</main>
