@@ -1,0 +1,42 @@
+// *Colors
+$background-color: #1f1f1f;
+$logo-color: #f4f1ea;
+$color-1: #ffffff;
+$color-2: #de7a00;
+$color-3: #b6b6b6;
+$color-4: #4d4d4d;
+$color-5: #e0b682;
+$scrollbar-hover: #9c5500;
+$scrollbar-track-color: #000000;
+$nav-background: #0a0a0a;
+$content-box-grad: linear-gradient(
+    $background-color,
+    $color-4,
+    $background-color
+);
+
+//*Boxes
+$b-trans-box: rgba(0, 0, 0, 0.7);
+
+// *Animations
+$transition-speed: 600ms;
+
+@keyframes rotate-round {
+    0% {
+        transform: rotateY(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
