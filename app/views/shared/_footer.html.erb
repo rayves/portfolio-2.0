@@ -1,18 +1,18 @@
 <footer>
-    <!-- social links grouped together in footer -->
-    <div class="socials-container">
-        <!-- target attribute set as _blank for new tab to open but also stay on this website. -->
-        <a href="https://twitter.com/RaymondVo1" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="fab fa-twitter socials"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/raymondvo/" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="fab fa-linkedin-in socials"></i>
-        </a>
-        <a href="https://github.com/rayves" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="fab fa-github socials"></i>
-        </a>
-        <a href="https://codepen.io/rayves" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="fab fa-codepen socials"></i>
-        </a>
-    </div>
+	<!-- social links grouped together in footer -->
+	<div class="socials-container">
+		<!-- target attribute set as _blank for new tab to open but also stay on this website. -->
+		<%= link_to "https://twitter.com/RaymondVo1", target:"_blank", rel:"noopener noreferrer", class:"social-link" do %>
+			<i class="fab fa-twitter socials"></i>
+		<% end %>
+		<%= link_to "https://www.linkedin.com/in/raymondvo/", target:"_blank", rel:"noopener noreferrer", class:"social-link" do %>
+			<i class="fab fa-linkedin-in socials"></i>
+		<% end %>
+		<%= link_to "https://github.com/rayves", target:"_blank", rel:"noopener noreferrer", class:"social-link" do %>
+			<i class="fab fa-github socials"></i>
+		<% end %>
+		<%= link_to "https://codepen.io/rayves", target:"_blank", rel:"noopener noreferrer", class:"social-link" do %>
+			<i class="fab fa-codepen socials"></i>
+		<% end %>
+	</div>
 </footer>

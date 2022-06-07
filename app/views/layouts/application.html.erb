@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Portfolio20</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= favicon_link_tag asset_path('Home/RV.svg') %>
-    <%= javascript_importmap_tags %>
-  </head>
-  <body>
-    <%= render "shared/nav" %>
-    <%= yield %>
-  </body>
+	<head>
+		<title>Portfolio20</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+		<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+		<%= favicon_link_tag asset_path('Home/RV.svg') %>
+		<%= javascript_importmap_tags %>
+	</head>
+	<body>
+		<%= render "shared/nav" %>
+		<%= yield %>
+		<%= render "shared/footer" %>
+	</body>
 </html>

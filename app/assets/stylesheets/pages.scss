@@ -35,7 +35,7 @@ body {
 
 // margin to avoid overlapping with nav
 main {
-    margin-left: 5rem;
+    margin-left: 3.5rem;
     padding: 1rem;
 }
 
@@ -122,7 +122,7 @@ b {
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
     transition: $transition-speed;
-    i {
+    svg {
         margin: 0 0.5rem 0 1rem;
     }
     &:hover {
@@ -143,15 +143,17 @@ b {
 // sizing for nav icon
 .nav-icon {
     font-size: 1.5rem;
-}
-
-// direct icon adjustments
-.fas,
-.fab,
-.far {
     color: $color-2;
     transition: $transition-speed;
 }
+
+// direct icon adjustments
+// .fas,
+// .fab,
+// .far {
+//     color: $color-2;
+//     transition: $transition-speed;
+// }
 
 // to highlight current page
 .highlighted {
@@ -222,6 +224,10 @@ b {
 .social-link {
     text-decoration: none;
     animation: fade-in 3s ease;
+    svg {
+        color: $color-2;
+        transition: $transition-speed;
+    }
 }
 
 .socials {
@@ -278,8 +284,8 @@ b {
 // *<------------------------ABOUT PAGE---------------------------->
 
 // styling for root of about page
-.about-root {
-    background-image: url(../imgs/About/5162018-485.jpg);
+.about-main {
+    background: url(About/about.jpg);
     background-size: cover;
     background-position: 150px -70px;
 }
