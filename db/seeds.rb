@@ -87,6 +87,12 @@ projects = [
     cover_path: assets[10],
     asset_id: [12, 13, 14, 15],
     technology_id: [2, 3, 7, 9, 1, 4, 8, 11, 12, 10]
+  },
+  {
+    name: 'Portfolio 2.0',
+    description: 'A recreation of my first portfolio project which I only used html and css, now using Ruby on Rails',
+    link: 'github.com/rayves/portfolio-2.0',
+    technology_id: [2, 3, 5, 7, 1, 4, 8, 10]
   }
 ]
 

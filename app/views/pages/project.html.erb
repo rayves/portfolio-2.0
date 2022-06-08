@@ -7,12 +7,12 @@
 		<!-- subh-header of pag -->
 		<h2 class="project-header"><%= @project.name %></h2>
 		<!-- image that is shown on the project's card on the main project page will appear here. In this case the image is a youtube video. -->
-		<%= image_tag "projects/#{@project.cover_path}" %>
-		<%# <iframe src="https://www.youtube.com/embed/7JG6W91CmQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="photographyt"></iframe> %>
+		<% if @project.cover_path %>
+			<%= image_tag "projects/#{@project.cover_path}" %>
+		<% end %>
 		<section>
 			<div class="seg-container">
 				<h3>Purpose</h3>
-				<!-- Description of project here -->
 				<p class="blog-content">
 					<%= @project.description %>
 				</p>
@@ -24,7 +24,6 @@
 							<% end %>
 						</p>
 						<div>
-							<!-- this area will show programming langauges used in project -->
 							<div class="seg-container">
 								<h3>Tech Stack</h3>
 								<div class="project-lang">
