@@ -26,12 +26,5 @@
 		<% end %>
 	</section>
 </main>
-<script type="text/javascript" src="../scripts/vanilla-tilt.js" integrity="sha512-5RPueBRwDHxZ362heK/fya6Azw6ayHtn7nTqZnIoGFjiXdGAEvAjKco/FvzpTEIbfJI2Qxirl0/g21qizV/a/g=="></script>
-<script>
-	VanillaTilt.init(document.querySelectorAll(".project-card"),{
-			max: 25,
-			speed: 400,
-	glare: true,
-	"max glare": 1,
-		});
-</script>
+<%= javascript_include_tag "vanilla-tilt", type:"text/javascript" %>
+<%= javascript_include_tag "tilt" %>

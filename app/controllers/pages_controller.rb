@@ -9,13 +9,15 @@ class PagesController < ApplicationController
     @projects = Project.all
   end
 
-  def project; end
+  def project
+    @project = Project.find(params[:id])
+  end
 
   def blog
-    @projects = Project.all
   end
 
   def contact; end
 end
 
 private
+
