@@ -13,7 +13,7 @@
 				<div class="card-content">
 					<!-- holds project title -->
 					<h2 class="blog-heading"><%= project.name.titleize %></h2>
-					<%# <img src="../imgs/Projects/photograph.PNG" alt="photograph video" class="project-img"> %>
+					<%= image_tag "projects/#{project.cover_path}", alt: project.name, class: "project-img" %>
 					<p class="project-lang">
 						<% project.technologies.each do |tech| %>
 							<i class="<%= tech.icon %>"></i>

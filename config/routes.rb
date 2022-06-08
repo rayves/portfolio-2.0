@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'journey', to: 'pages#journey', as: 'journey'
   get 'projects', to: 'pages#projects', as: 'projects'
   get 'projects/:id', to: 'pages#project', as: 'project'
-  get 'blog', to: 'pages#blog', as: 'blog'
+  # get 'blog', to: 'pages#blog', as: 'blog'
   get 'contact', to: 'pages#contact', as: 'contact'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
