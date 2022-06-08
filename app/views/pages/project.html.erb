@@ -1,1 +1,61 @@
-
+<div class="h1-container">
+	<h1 class="default-page-header blog-header">Projects</h1>
+</div>
+<main class="content-container">
+	<!-- where blog content will be. grouped together so layout of all child elements can be easily grouped together in layout -->
+	<article class="blog-art-container">
+		<!-- subh-header of pag -->
+		<h2 class="project-header"><%= @project.name %></h2>
+		<!-- image that is shown on the project's card on the main project page will appear here. In this case the image is a youtube video. -->
+		<%= image_tag "projects/#{@project.cover_path}" %>
+		<%# <iframe src="https://www.youtube.com/embed/7JG6W91CmQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="photographyt"></iframe> %>
+		<section>
+			<div class="seg-container">
+				<h3>Purpose</h3>
+				<!-- Description of project here -->
+				<p class="blog-content">
+					<%= @project.description %>
+				</p>
+				<div>
+					<div class="seg-container">
+						<p class="blog-content">
+							<%= link_to "https://#{@project.link}", target:"_blank", rel:"noopener noreferrer" do %>
+								<h3>Github Repo</h3>
+							<% end %>
+						</p>
+						<div>
+							<!-- this area will show programming langauges used in project -->
+							<div class="seg-container">
+								<h3>Tech Stack</h3>
+								<div class="project-lang">
+									<% @project.technologies.each do |tech| %>
+										<i class="<%= tech.icon %>"></i>
+									<% end %>
+								</div>
+								<div>
+									<div class="img-container">
+										<% @project.assets.each do |asset| %>
+											<%= image_tag "projects/#{asset.path}" %>
+										<% end %>
+										<div>
+										</section>
+									</article>
+									<section class="page-nav">
+										<div>
+											<% if params[:id].to_i != 1 %>
+												<%= link_to project_path(params[:id].to_i - 1) do %>
+													<i class="fas fa-arrow-circle-left"></i>
+													<span>Previous Project</span>
+												<% end %>
+											<% end %>
+										</div>
+										<div>
+											<% if params[:id].to_i + 1 <= @total_projects %>
+												<%= link_to project_path(params[:id].to_i + 1) do %>
+													<span>Next Project</span>
+													<i class="fas fa-arrow-circle-right"></i>
+												<% end %>
+											<% end %>
+										</div>
+									</section>
+								</main>

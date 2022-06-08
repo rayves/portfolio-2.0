@@ -11,13 +11,12 @@ class PagesController < ApplicationController
 
   def project
     @project = Project.find(params[:id])
+    @total_projects = Project.last.id
   end
 
-  def blog
-  end
+  def blog; end
 
   def contact; end
 end
 
 private
-
